@@ -1,4 +1,4 @@
-FROM docker.elastic.co/logstash/logstash:5.6.9
+FROM docker.elastic.co/logstash/logstash:5.6.10
 
 USER root
 ADD https://teration.net/logstash-mixin-zeromq-4.0.0.gem /opt/logstash-mixin-zeromq-4.0.0.gem
