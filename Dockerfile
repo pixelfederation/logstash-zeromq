@@ -22,7 +22,7 @@ ADD https://github.com/lukewaite/logstash-input-cloudwatch-logs/releases/downloa
 ADD http://springdale.math.ias.edu/data/puias/unsupported/7/x86_64//openpgm-5.2.122-2.sdl7.x86_64.rpm /root/openpgm-5.2.122-2.sdl7.x86_64.rpm
 
 RUN rpm -Uvh /root/openpgm-5.2.122-2.sdl7.x86_64.rpm && \
-    yum install -y libzmq5 && \
+    yum install -y libzmq5 haveged && \
     ln -sf /usr/lib64/libzmq.so.5 /usr/local/lib/libzmq.so
 
 RUN logstash-plugin install --no-verify /opt/logstash-input-cloudwatch_logs-1.0.3.gem && \
