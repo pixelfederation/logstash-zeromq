@@ -10,9 +10,9 @@ RUN tar -xzvf logstash-zeromq.tar.gz && \
     bundle install && \
     gem build logstash-integration-zeromq.gemspec
 
-FROM docker.elastic.co/logstash/logstash:7.6.0
+FROM docker.elastic.co/logstash/logstash:7.1.1
 
-ARG LOGSTASH_ZEROMQ_VERSION=0.2.1
+ARG LOGSTASH_ZEROMQ_VERSION=0.2.2
 
 USER root
 
