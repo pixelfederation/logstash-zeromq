@@ -1,5 +1,5 @@
 FROM jruby:9
-ARG LOGSTASH_ZEROMQ_VERSION=0.2.4
+ARG LOGSTASH_ZEROMQ_VERSION=0.2.10
 
 WORKDIR /tmp/build
 
@@ -12,7 +12,7 @@ RUN tar -xzvf logstash-zeromq.tar.gz && \
 
 FROM docker.elastic.co/logstash/logstash:7.6.0
 
-ARG LOGSTASH_ZEROMQ_VERSION=0.2.4
+ARG LOGSTASH_ZEROMQ_VERSION=0.2.10
 
 USER root
 
